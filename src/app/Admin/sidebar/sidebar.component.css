@@ -1,0 +1,33 @@
+p {
+    color: white;
+    transition: color 0.2s, background-color 0.2s, border-radius 0.2s;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+p:hover {
+    color: #d1d5db;
+    background-color: rgba(255, 255, 255, 0.204);
+}
+
+p.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #d1d5db;
+}
+
+.offcanvas {
+    background-color: #0d6efd;
+    color: white;
+    width: 250px;
+}
+
+.custom-offcanvas {
+    border-radius: 0 20px 20px 0;
+    /* Adjust the value as needed */
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.323);
+}

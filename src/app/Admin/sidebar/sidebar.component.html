@@ -1,0 +1,45 @@
+<nav class="navbar bg-primary fixed-top">
+    <div class="container-fluid">
+        <img src="../../../assets/Image/icons/menu.png" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasSidebar"
+    aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/admin/dashboard" routerLinkActive="active"
+                    (click)="navigateTo('/admin/dashboard')">Dashboard</p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/appointments" routerLinkActive="active"
+                    (click)="navigateTo('/appointments')">Appointments</p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/admin/doctor" routerLinkActive="active"
+                    (click)="navigateTo('/admin/doctor')">Doctor</p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/admin/patient" routerLinkActive="active"
+                    (click)="navigateTo('/admin/patient')">Patients</p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/operations" routerLinkActive="active"
+                    (click)="navigateTo('/operations')">Operations</p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/earnings" routerLinkActive="active" (click)="navigateTo('/earnings')">
+                    Earnings</p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/logout" routerLinkActive="active" (click)="navigateTo('/logout')">
+                    Logout</p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0;
+        /* Optional: Remove padding on smaller screens */
+    }
+
+    .bg-primary img {
+        max-width: 80%;
+        /* Ensure the image fits well on mobile */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}

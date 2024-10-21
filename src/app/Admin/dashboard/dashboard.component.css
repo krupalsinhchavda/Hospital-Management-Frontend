@@ -1,0 +1,16 @@
+.card {
+    background-color: #ffffff;
+    /* Card background */
+    border: 1px solid #dee2e6;
+    /* Card border */
+}
+
+.card-title {
+    color: #1e3a8a;
+    /* Primary text color */
+}
+
+.muted-text {
+    color: #6c757d;
+    /* Muted text color */
+}

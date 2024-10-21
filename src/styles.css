@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.btn-custom {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.btn-custom:hover {
+    background-color: #5a6268;
+}
+
+.btn-link {
+    color: #007bff;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.table-responsive {
+    overflow-y: auto;
+}
