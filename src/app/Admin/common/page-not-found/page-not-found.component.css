@@ -1,0 +1,44 @@
+.error-wrapper {
+    margin: 0;
+    color: #4f5155;
+    -moz-box-align: center;
+    -moz-box-pack: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background: #fff;
+}
+
+.error-box {
+    border-radius: 5px;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 620px;
+    padding: 50px 30px 55px;
+    text-align: center;
+    width: 100%;
+}
+
+.error-box img {
+    margin-bottom: 50px;
+}
+
+.error-box h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.error-box p {
+    margin-bottom: 40px;
+    color: #33344880;
+}
+
+.error-box .btn {
+    text-transform: capitalize;
+    min-width: 179px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin: 20px;
+}

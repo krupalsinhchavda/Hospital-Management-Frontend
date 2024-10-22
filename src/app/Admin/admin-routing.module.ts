@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminComponent } from './admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const AdminRoutingModule: Routes = [
   {
@@ -13,6 +13,9 @@ export const AdminRoutingModule: Routes = [
       { path: 'patient', loadChildren: () => import('./patient/patient-routing.module').then(m => m.PatientRoutingModule) },
       { path: 'staff', loadChildren: () => import('./staff/staff-routing.module').then(m => m.StaffRoutingModule) },
       { path: 'appointments', loadChildren: () => import('./appointment/appointment-routing.module').then(m => m.AppointmentRoutingModule) },
+      { path: 'medicine', loadChildren: () => import('./medicine/medicine-routing.module').then(m => m.MedicineRoutingModule) },
+      { path: 'inventory', loadChildren: () => import('./inventory/inventory-routing.module').then(m => m.InventoryRoutingModule) },
+      { path: 'allotment', loadChildren: () => import('./allotment/allotment-routing.module').then(m => m.AllotmentRoutingModule) },
     ]
   }
 ]
