@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
+                    <h3 class="mb-3 mb-md-0">Appointment List</h3>
+                    <div class="top-nav-search table-search-blk ">
+                        <input placeholder="Search here" class="form-control search-input" />
+                    </div>
+
+                    <div class="add-group d-flex flex-md-row">
+                        <p class="btn btn-primary add-pluss ms-2" routerLink="/admin/appointments/add-appointment">
+                            <img src="../../../assets/Image/icons/plus.svg" alt="">
+                        </p>
+                        <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2"><img
+                                src="../../../assets/Image/icons/re-fresh.svg" alt=""></a>
+                    </div>
+                </div>
+                <!-- Scrollable Table Container -->
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Consulting Doctor</th>
+                                <th>Treatment</th>
+                                <th>Mobile</th>
+                                <th>Email</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let appointment of appointments">
+                                <td>{{ appointment.name }}</td>
+                                <td>{{ appointment.consultingDoctor }}</td>
+                                <td>{{ appointment.treatment }}</td>
+                                <td>{{ appointment.mobile }}</td>
+                                <td>{{ appointment.email }}</td>
+                                <td>{{ appointment.date }}</td>
+                                <td>{{ appointment.time }}</td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary btn-sm me-2">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span>Showing 1 to {{ appointments.length }} of {{ appointments.length }} entries</span>
+                        <div>
+                            <button class="btn btn-secondary me-2">Previous</button>
+                            <button class="btn btn-secondary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

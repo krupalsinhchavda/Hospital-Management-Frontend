@@ -1,0 +1,79 @@
+<div class="container card p-3">
+    <h2 class="text-lg font-semibold mb-4">Appointment Details</h2>
+
+    <!-- Form Group for Appointment -->
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+        <div class="row mb-3">
+            <!-- Patient Information -->
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="firstName" class="form-label">First Name *</label>
+                <input type="text" id="firstName" formControlName="firstName" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="lastName" class="form-label">Last Name *</label>
+                <input type="text" id="lastName" formControlName="lastName" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="mobile" class="form-label">Mobile *</label>
+                <input type="tel" id="mobile" formControlName="mobile" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label class="form-label">Gender *</label>
+                <div>
+                    <input type="radio" id="male" formControlName="gender" value="male" class="form-check-input"
+                        required />
+                    <label for="male" class="form-check-label">Male</label>
+                    <input type="radio" id="female" formControlName="gender" value="female" class="form-check-input"
+                        required />
+                    <label for="female" class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" id="email" formControlName="email" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="address" class="form-label">Address *</label>
+                <textarea id="address" formControlName="address" class="form-control" required></textarea>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="appointmentDate" class="form-label">Date of Appointment *</label>
+                <input type="date" id="appointmentDate" formControlName="appointmentDate" class="form-control"
+                    required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="fromTime" class="form-label">From *</label>
+                <input type="time" id="fromTime" formControlName="fromTime" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="toTime" class="form-label">To *</label>
+                <input type="time" id="toTime" formControlName="toTime" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="doctor" class="form-label">Consulting Doctor</label>
+                <select id="doctor" formControlName="doctor" class="form-select">
+                    <option value="">Select Doctor</option>
+                    <!-- Add doctor options dynamically here -->
+                </select>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="treatment" class="form-label">Treatment</label>
+                <input type="text" id="treatment" formControlName="treatment" class="form-control" />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="notes" class="form-label">Notes</label>
+                <textarea id="notes" formControlName="notes" class="form-control"></textarea>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="avatar" class="form-label">Avatar</label>
+                <input type="file" id="avatar" formControlName="avatar" class="form-control" />
+            </div>
+
+            <!-- Form Action Buttons -->
+            <div class="d-flex justify-content-end mt-3">
+                <button type="submit" class="btn btn-primary bg-primary me-2">Submit</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
