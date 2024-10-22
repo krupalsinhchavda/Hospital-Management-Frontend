@@ -48,3 +48,22 @@ p.active {
     color: #d1d5db;
     background-color: rgba(255, 255, 255, 0.204);
 }
+
+.scrollToTop {
+    background-color: #2e37a4;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    inset-inline-end: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+    z-index: 10000;
+    height: 2.5rem;
+    width: 2.5rem;
+    transition: background-color .1s linear;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 24px 0 rgba(0, 0, 0, 0.305);
+}
