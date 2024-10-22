@@ -73,32 +73,32 @@ p {
 
 /* Styling for Add and Refresh button */
 .add-group .btn-primary {
-    background: #2e37a40d;
-    border-radius: 12px;
-    color: #2e37a4;
-    width: 40px;
-    height: 40px;
+    background: #2e37a40d !important;
+    border-radius: 12px !important;
+    color: #2e37a4 !important;
+    width: 40px !important;
+    height: 40px !important;
     transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
     -ms-transition: all .5s ease;
     -webkit-transition: all .5s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
 }
 
 /* Add button container: display and alignment */
 .add-group {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
 }
 
 /* Search block positioning */
 .table-search-blk {
-    position: relative;
+    position: relative !important;
 }
 
 /* Search input styling: padding and background icon */

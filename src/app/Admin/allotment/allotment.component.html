@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
+                    <h3 class="mb-3 mb-md-0">Allotment List</h3>
+                    <div class="top-nav-search table-search-blk">
+                        <input placeholder="Search here" class="form-control search-input" />
+                    </div>
+
+                    <div class="add-group d-flex flex-md-row">
+                        <p class="btn btn-primary add-pluss ms-2" routerLink="/admin/allotments/add-allotment">
+                            <img src="../../../assets/Image/icons/plus.svg" alt="">
+                        </p>
+                        <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2">
+                            <img src="../../../assets/Image/icons/re-fresh.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- Scrollable Table Container -->
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Room No</th>
+                                <th>Patient Name</th>
+                                <th>Room Type</th>
+                                <th>Admission Date</th>
+                                <th>Gender</th>
+                                <th>Mobile</th>
+                                <th>Doctor Assigned</th>
+                                <th>Status</th>
+                                <th>Amount Charged</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let allotment of allotments">
+                                <td>{{ allotment.roomNo }}</td>
+                                <td>{{ allotment.patientName }}</td>
+                                <td>{{ allotment.roomType }}</td>
+                                <td>{{ allotment.admissionDate }}</td>
+                                <td>{{ allotment.gender }}</td>
+                                <td>{{ allotment.mobile }}</td>
+                                <td>{{ allotment.doctorAssigned }}</td>
+                                <td>{{ allotment.status }}</td>
+                                <td>{{ allotment.amountCharged }}</td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary btn-sm me-2"
+                                        (click)="editAllotment(allotment)">Edit</button>
+                                    <button class="btn btn-danger btn-sm"
+                                        (click)="deleteAllotment(allotment)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <span>Showing 1 to {{ allotments.length }} of {{ allotments.length }} entries</span>
+                    <div>
+                        <button class="btn btn-secondary me-2">Previous</button>
+                        <button class="btn btn-secondary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

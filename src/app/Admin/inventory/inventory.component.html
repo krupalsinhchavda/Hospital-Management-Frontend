@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
+                    <h3 class="mb-3 mb-md-0">Stock List</h3>
+                    <div class="top-nav-search table-search-blk">
+                        <input placeholder="Search here" class="form-control search-input" />
+                    </div>
+
+                    <div class="add-group d-flex flex-md-row">
+                        <p class="btn btn-primary add-pluss ms-2" routerLink="/admin/inventory/add-inventory">
+                            <img src="../../../assets/Image/icons/plus.svg" alt="">
+                        </p>
+                        <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2">
+                            <img src="../../../assets/Image/icons/re-fresh.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- Scrollable Table Container -->
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Date</th>
+                                <th>Price</th>
+                                <th>Details</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let stock of stocks">
+                                <td>{{ stock.itemName }}</td>
+                                <td>{{ stock.category }}</td>
+                                <td>{{ stock.quantity }}</td>
+                                <td>{{ stock.date }}</td>
+                                <td>{{ stock.price }}</td>
+                                <td>{{ stock.details }}</td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary btn-sm me-2" (click)="editStock(stock)">Edit</button>
+                                    <button class="btn btn-danger btn-sm" (click)="deleteStock(stock)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <span>Showing 1 to {{ stocks.length }} of {{ stocks.length }} entries</span>
+                    <div>
+                        <button class="btn btn-secondary me-2">Previous</button>
+                        <button class="btn btn-secondary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

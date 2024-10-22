@@ -1,0 +1,52 @@
+<div class="container card p-3">
+    <h3 class="mb-3 mb-md-0">Medicine Details</h3>
+    <!-- Form Group for Medicine -->
+    <form [formGroup]="medicineForm" (ngSubmit)="onSubmit()">
+        <div class="row mb-3">
+            <!-- Medicine Information -->
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="medicineNumber" class="form-label">Medicine Number *</label>
+                <input type="text" id="medicineNumber" formControlName="medicineNumber" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="medicineName" class="form-label">Medicine Name *</label>
+                <input type="text" id="medicineName" formControlName="medicineName" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="category" class="form-label">Category *</label>
+                <select id="category" formControlName="category" class="form-select" required>
+                    <option value="">Select Category</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="injection">Injection</option>
+                    <option value="syrup">Syrup</option>
+                </select>
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="company" class="form-label">Company *</label>
+                <input type="text" id="company" formControlName="company" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="purchaseDate" class="form-label">Purchase Date *</label>
+                <input type="date" id="purchaseDate" formControlName="purchaseDate" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="price" class="form-label">Price *</label>
+                <input type="number" id="price" formControlName="price" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="expiryDate" class="form-label">Expiry Date *</label>
+                <input type="date" id="expiryDate" formControlName="expiryDate" class="form-control" required />
+            </div>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <label for="stock" class="form-label">Stock *</label>
+                <input type="number" id="stock" formControlName="stock" class="form-control" required />
+            </div>
+
+            <!-- Form Action Buttons -->
+            <div class="d-flex justify-content-end mt-3">
+                <button type="submit" class="btn btn-primary bg-primary me-2">Submit</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
