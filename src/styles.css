@@ -66,16 +66,6 @@ p {
     background-color: #5a6268;
 }
 
-/* Button link styling */
-.btn-link {
-    color: #2e37a4;
-}
-
-/* Button link hover effect */
-.btn-link:hover {
-    text-decoration: underline;
-}
-
 /* Table responsive styling: enable vertical scrolling */
 .table-responsive {
     overflow-y: auto;

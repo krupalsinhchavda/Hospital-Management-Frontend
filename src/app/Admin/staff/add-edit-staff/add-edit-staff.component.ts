@@ -4,17 +4,17 @@ import { ReactiveFormsModule, FormsModule, FormGroup, FormBuilder, Validators } 
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-add-edit-patient',
+  selector: 'app-add-edit-staff',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule, FormsModule, RouterModule],
-  templateUrl: './add-edit-patient.component.html',
-  styleUrl: './add-edit-patient.component.css'
+  templateUrl: './add-edit-staff.component.html',
+  styleUrl: './add-edit-staff.component.css'
 })
-export class AddEditPatientComponent implements OnInit {
-  patientForm: FormGroup;
+export class AddEditStaffComponent implements OnInit {
+  staffForm: FormGroup;
 
   constructor(private fb: FormBuilder, private router: Router) {
-    this.patientForm = this.fb.group({
+    this.staffForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       mobile: ['', Validators.required],
@@ -32,9 +32,9 @@ export class AddEditPatientComponent implements OnInit {
   ngOnInit(): void { }
 
   onSubmit(): void {
-    if (this.patientForm.valid) {
-      console.log(this.patientForm.value);
-      this.router.navigate(['/admin/patient'])
+    if (this.staffForm.valid) {
+      console.log(this.staffForm.value);
+      this.router.navigate(['/admin/staff'])
 
       // Handle the form submission
     } else {

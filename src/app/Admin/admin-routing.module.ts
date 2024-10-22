@@ -11,6 +11,7 @@ export const AdminRoutingModule: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'doctor', loadChildren: () => import('./doctor/doctor-routing.module').then(m => m.DoctorRoutingModule) },
       { path: 'patient', loadChildren: () => import('./patient/patient-routing.module').then(m => m.PatientRoutingModule) },
+      { path: 'staff', loadChildren: () => import('./staff/staff-routing.module').then(m => m.StaffRoutingModule) },
     ]
   }
 ]
