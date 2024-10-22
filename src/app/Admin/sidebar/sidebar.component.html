@@ -17,13 +17,35 @@
                     (click)="navigateTo('/admin/dashboard')">Dashboard</p>
             </li>
             <li class="nav-item">
-                <p class="nav-link" routerLink="/appointments" routerLinkActive="active"
-                    (click)="navigateTo('/appointments')">Appointments</p>
+                <p class="nav-link" routerLink="/admin/appointments" routerLinkActive="active"
+                    (click)="navigateTo('/admin/appointments')">Appointments</p>
             </li>
             <li class="nav-item">
                 <p class="nav-link" routerLink="/admin/doctor" routerLinkActive="active"
                     (click)="navigateTo('/admin/doctor')">Doctor</p>
             </li>
+            <!-- Staff Dropdown -->
+            <li class="nav-item dropdown">
+                <p class="nav-link dropdown-toggle" id="staffDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Staff
+                </p>
+                <ul class="dropdown-menu" aria-labelledby="staffDropdown">
+                    <li>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff')">Staff List</p>
+                    </li>
+                    <li>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/add-staff')">Add Staff</p>
+                    </li>
+                    <li>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-leaves')">Leaves</p>
+                    </li>
+                    <li>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-holidays')">Holidays</p>
+                    </li>
+                </ul>
+            </li>
+
             <li class="nav-item">
                 <p class="nav-link" routerLink="/admin/patient" routerLinkActive="active"
                     (click)="navigateTo('/admin/patient')">Patients</p>

@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
+                    <h3 class="mb-3 mb-md-0">Holidays List</h3>
+                    <div class="top-nav-search table-search-blk ">
+                        <input placeholder="Search here" class="form-control search-input" />
+                    </div>
+
+                    <div class="add-group d-flex flex-md-row">
+                        <p class="btn btn-primary add-pluss ms-2" (click)="openDialog()">
+                            <img src="../../../assets/Image/icons/plus.svg" alt="">
+                        </p>
+
+                        <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2"><img
+                                src="../../../assets/Image/icons/re-fresh.svg" alt=""></a>
+                    </div>
+                </div>
+                <!-- Scrollable Table Container -->
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Holiday Date</th>
+                                <th>Day</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let holiday of holidays">
+                                <td>{{ holiday.title }}</td>
+                                <td>{{ holiday.date }}</td>
+                                <td>{{ holiday.day }}</td>
+                                <td>{{ holiday.description }}</td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary btn-sm me-2">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mt-4">
+                        <span>Showing 1 to {{ holidays.length }} of {{ holidays.length }} entries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
