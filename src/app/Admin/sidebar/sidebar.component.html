@@ -7,60 +7,79 @@
 
 <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasSidebar"
     aria-labelledby="offcanvasSidebarLabel">
-    <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header d-flex justify-content-end">
+        <img src="../../../assets/Image/icons/menu-2.png" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
     </div>
     <div class="offcanvas-body">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <p class="nav-link" routerLink="/admin/dashboard" routerLinkActive="active"
-                    (click)="navigateTo('/admin/dashboard')">Dashboard</p>
+                    (click)="navigateTo('/admin/dashboard')">
+                    <img src="../../../assets/Image/icons/dashboard.png" width="24" height="24">
+                    Dashboard
+                </p>
             </li>
             <li class="nav-item">
                 <p class="nav-link" routerLink="/admin/appointments" routerLinkActive="active"
-                    (click)="navigateTo('/admin/appointments')">Appointments</p>
+                    (click)="navigateTo('/admin/appointments')">
+                    <img src="../../../assets/Image/icons/appointment-book.png" width="24" height="24">
+                    Appointments
+                </p>
             </li>
             <li class="nav-item">
                 <p class="nav-link" routerLink="/admin/doctor" routerLinkActive="active"
-                    (click)="navigateTo('/admin/doctor')">Doctor</p>
+                    (click)="navigateTo('/admin/doctor')">
+                    <img src="../../../assets/Image/icons/man.png" width="24" height="24">
+                    Doctor
+                </p>
             </li>
             <!-- Staff Dropdown -->
             <li class="nav-item dropdown">
                 <p class="nav-link dropdown-toggle" id="staffDropdown" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
+                    <img src="../../../assets/Image/icons/group.png" width="24" height="24">
                     Staff
                 </p>
                 <ul class="dropdown-menu" aria-labelledby="staffDropdown">
                     <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff')">Staff List</p>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff')">
+                            <img src="../../../assets/Image/icons/multiple-users-silhouette.png" width="24" height="24">
+                            Staff List
+                        </p>
                     </li>
                     <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/add-staff')">Add Staff</p>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/add-staff')">
+                            <img src="../../../assets/Image/icons/add-user.png" width="24" height="24">
+                            Add Staff
+                        </p>
                     </li>
                     <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-leaves')">Leaves</p>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-leaves')">
+                            <img src="../../../assets/Image/icons/exit.png" width="24" height="24">
+                            Leaves
+                        </p>
                     </li>
                     <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-holidays')">Holidays</p>
+                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-holidays')">
+                            <img src="../../../assets/Image/icons/beach-umbrella.png" width="24" height="24">
+                            Holidays
+                        </p>
                     </li>
                 </ul>
             </li>
 
             <li class="nav-item">
                 <p class="nav-link" routerLink="/admin/patient" routerLinkActive="active"
-                    (click)="navigateTo('/admin/patient')">Patients</p>
-            </li>
-            <li class="nav-item">
-                <p class="nav-link" routerLink="/operations" routerLinkActive="active"
-                    (click)="navigateTo('/operations')">Operations</p>
-            </li>
-            <li class="nav-item">
-                <p class="nav-link" routerLink="/earnings" routerLinkActive="active" (click)="navigateTo('/earnings')">
-                    Earnings</p>
+                    (click)="navigateTo('/admin/patient')">
+                    <img src="../../../assets/Image/icons/inpatient.png" width="26" height="26">
+                    Patients
+                </p>
             </li>
             <li class="nav-item">
                 <p class="nav-link" routerLink="/logout" routerLinkActive="active" (click)="navigateTo('/logout')">
-                    Logout</p>
+                    <img src="../../../assets/Image/icons/logout.png" width="24" height="24">
+                    Logout
+                </p>
             </li>
         </ul>
     </div>
