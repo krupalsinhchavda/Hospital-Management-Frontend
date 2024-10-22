@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container card p-3">
     <h2 class="text-lg font-semibold mb-4">Patient Details</h2>
     <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
         <div class="row g-3">
@@ -47,32 +47,6 @@
                 <label for="address" class="form-label">Address *</label>
                 <textarea id="address" formControlName="address" class="form-control" placeholder="Enter Address"
                     required></textarea>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="city" class="form-label">City *</label>
-                <select id="city" formControlName="city" class="form-select" required>
-                    <option>Select City</option>
-                    <!-- Add options here -->
-                </select>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="country" class="form-label">Country *</label>
-                <select id="country" formControlName="country" class="form-select" required>
-                    <option>Select Country</option>
-                    <!-- Add options here -->
-                </select>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="state" class="form-label">State/Province *</label>
-                <select id="state" formControlName="state" class="form-select" required>
-                    <option>Select State</option>
-                    <!-- Add options here -->
-                </select>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="postalCode" class="form-label">Postal Code *</label>
-                <input type="text" id="postalCode" formControlName="postalCode" class="form-control"
-                    placeholder="Enter Postal Code" required>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <label for="avatar" class="form-label">Avatar *</label>
