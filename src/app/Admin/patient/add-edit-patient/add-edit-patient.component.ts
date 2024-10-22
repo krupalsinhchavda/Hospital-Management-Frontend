@@ -23,11 +23,6 @@ export class AddEditPatientComponent implements OnInit {
       confirmPassword: ['', Validators.required],
       dob: [''],
       department: ['', Validators.required],
-      address: ['', Validators.required],
-      city: ['', Validators.required],
-      country: ['', Validators.required],
-      state: ['', Validators.required],
-      postalCode: ['', Validators.required],
       avatar: [''],
       status: ['', Validators.required],
     });

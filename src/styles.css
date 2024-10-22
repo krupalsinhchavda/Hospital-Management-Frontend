@@ -1,19 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
-
+/* Set full height for HTML and body elements */
 html,
 body {
     height: 100%;
 }
 
+/* Body styling: background color, margin reset, and font-family */
 body {
+    background: #f5f5f6;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+/* Remove margin for all headings (h1-h6) and paragraph (p) elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 !important;
+}
+
+/* Primary background color (used for buttons, table headers, etc.) */
+.bg-primary {
+    background-color: #2e37a4 !important;
+}
+
+/* Table styling: remove gaps between borders */
 .table {
     border-collapse: collapse;
 }
 
+/* Table header (th) and cell (td) common styling */
 .table th,
 .table td {
     padding: 1rem;
@@ -22,35 +41,88 @@ body {
     font-weight: 600;
 }
 
+/* Table header specific styling: background, text color, no borders, font size, uppercase text */
 .table th {
-    background-color: #007bff;
+    background-color: #2e37a4;
     color: #ffffff;
     border: none;
     font-size: 1rem;
     text-transform: uppercase;
 }
 
+/* Table row hover effect */
 .table tbody tr:hover {
     background-color: #e9ecef;
 }
 
+/* Custom button styling */
 .btn-custom {
     background-color: #6c757d;
     color: #ffffff;
 }
 
+/* Custom button hover effect */
 .btn-custom:hover {
     background-color: #5a6268;
 }
 
+/* Button link styling */
 .btn-link {
-    color: #007bff;
+    color: #2e37a4;
 }
 
+/* Button link hover effect */
 .btn-link:hover {
     text-decoration: underline;
 }
 
+/* Table responsive styling: enable vertical scrolling */
 .table-responsive {
     overflow-y: auto;
+}
+
+/* Styling for Add and Refresh button */
+.add-group .btn-primary {
+    background: #2e37a40d;
+    border-radius: 12px;
+    color: #2e37a4;
+    width: 40px;
+    height: 40px;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+
+/* Add button container: display and alignment */
+.add-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Search block positioning */
+.table-search-blk {
+    position: relative;
+}
+
+/* Search input styling: padding and background icon */
+.search-input {
+    padding-left: 35px;
+    background: url('./assets/Image/icons/search-normal.svg') no-repeat 10px center;
+    background-size: 20px 20px;
+    background-color: #2e37a40d;
+}
+
+.card {
+    margin-bottom: 25px;
+    box-shadow: none;
+    border: 0;
+    border-radius: 12px;
+    width: 100%;
 }

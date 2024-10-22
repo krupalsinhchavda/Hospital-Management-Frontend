@@ -4,11 +4,13 @@ p {
     display: block;
     padding: 8px 16px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 p:hover {
     color: #d1d5db;
     background-color: rgba(255, 255, 255, 0.204);
+    cursor: pointer;
 }
 
 p.active {
@@ -17,7 +19,7 @@ p.active {
 }
 
 .offcanvas {
-    background-color: #0d6efd;
+    background-color: #2e37a4;
     color: white;
     width: 250px;
 }

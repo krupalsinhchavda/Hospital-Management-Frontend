@@ -1,39 +1,80 @@
-<div class="d-flex flex-column flex-md-row">
-    <main class="flex-fill p-4">
-        <header class="d-flex justify-content-between mb-4">
-            <h1 class="h2">Good Morning, Daniel Bruk</h1>
-            <p class="muted-text">Have a nice day at work</p>
-        </header>
-
-        <div class="row g-4 mb-4">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card p-3 shadow">
-                    <h2 class="card-title h5">Appointments</h2>
-                    <p class="display-4">250</p>
-                    <p class="muted-text">↑ 40% vs last month</p>
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/angular/template/dashboard/admin-dashboard">Dashboard </a>
+                    </li>
+                    <li class="breadcrumb-item active">Admin Dashboard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="good-morning-blk">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="morning-user">
+                    <h2>Good Morning, <span>Daniel Bruk</span>
+                    </h2>
+                    <p>Have a nice day at work</p>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card p-3 shadow">
-                    <h2 class="card-title h5">New Patients</h2>
-                    <p class="display-4">140</p>
-                    <p class="muted-text">↑ 20% vs last month</p>
-                </div>
+            <div class="col-md-6 position-blk">
+                <div class="morning-img"><img src="../../../assets/Image/bg-dashbaord.png" alt=""></div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card p-3 shadow">
-                    <h2 class="card-title h5">Operations</h2>
-                    <p class="display-4">56</p>
-                    <p class="muted-text">↑ 15% vs last month</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <div class="dash-boxs comman-flex-center"><img src="../../../assets/Image/icons/calendar.svg" alt="">
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card p-3 shadow">
-                    <h2 class="card-title h5">Earnings</h2>
-                    <p class="display-4">$20,250</p>
-                    <p class="muted-text">↑ 30% vs last month</p>
+                <div class="dash-content dash-count">
+                    <h4>Appointments</h4>
+                    <h2><span class="counter-up">250</span>
+                    </h2>
+                    <p><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>40%</span> vs
+                        last month</p>
                 </div>
             </div>
         </div>
-    </main>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <div class="dash-boxs comman-flex-center"><img src="../../../assets/Image/icons/profile-add.svg" alt="">
+                </div>
+                <div class="dash-content dash-count">
+                    <h4>New Patients</h4>
+                    <h2><span class="counter-up">140</span>
+                    </h2>
+                    <p><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>20%</span> vs
+                        last month</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <div class="dash-boxs comman-flex-center"><img src="../../../assets/Image/icons/scissor.svg" alt="">
+                </div>
+                <div class="dash-content dash-count">
+                    <h4>Operations</h4>
+                    <h2><span class="counter-up">56</span>
+                    </h2>
+                    <p><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>15%</span>
+                        vs last month</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <div class="dash-boxs comman-flex-center"><img src="../../../assets/Image/icons/empty-wallet.svg"
+                        alt=""></div>
+                <div class="dash-content dash-count">
+                    <h4>Earnings</h4>
+                    <h2>$<span class="counter-up">20,250</span></h2>
+                    <p><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>30%</span> vs
+                        last month</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
