@@ -1,16 +1,17 @@
 p {
     color: white;
-    transition: color 0.2s, background-color 0.2s, border-radius 0.2s;
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
     display: block;
-    padding: 8px 16px;
+    padding: 12px 18px;
     border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
 }
 
 p:hover {
     color: #d1d5db;
-    background-color: rgba(255, 255, 255, 0.204);
-    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 p.active {
@@ -19,51 +20,47 @@ p.active {
 }
 
 .offcanvas {
-    background-color: #2e37a4;
+    background-color: #1d2951;
     color: white;
-    width: 250px;
+    width: 280px;
 }
 
 .custom-offcanvas {
     border-radius: 0 20px 20px 0;
+    box-shadow: 5px 0 15px rgba(255, 255, 255, 0.935);
 }
 
 .nav-link.active {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.323);
-}
-
-/* Additional styles for dropdown items */
-.dropdown-menu {
-    background-color: white;
-}
-
-.dropdown-item {
-    color: black;
-    padding: 8px 16px;
-    transition: color 0.2s, background-color 0.2s, border-radius 0.2s;
-}
-
-.dropdown-item:hover {
-    color: #d1d5db;
-    background-color: rgba(255, 255, 255, 0.204);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .scrollToTop {
-    background-color: #2e37a4;
-    color: #fff;
+    background-color: #1d2951;
+    color: white;
     position: fixed;
     bottom: 20px;
-    inset-inline-end: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    display: none;
-    z-index: 10000;
-    height: 2.5rem;
-    width: 2.5rem;
-    transition: background-color .1s linear;
-    border-radius: 0.5rem;
-    box-shadow: 5px 5px 24px 0 rgba(0, 0, 0, 0.305);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.scrollToTop:hover {
+    background-color: #172241;
+}
+
+.menu-icon,
+.close-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-item img {
+    margin-right: 10px;
 }

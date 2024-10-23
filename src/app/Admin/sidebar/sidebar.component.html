@@ -1,6 +1,6 @@
 <nav class="navbar bg-primary fixed-top">
     <div class="container-fluid">
-        <img src="../../../assets/Image/icons/menu.png" type="button" data-bs-toggle="offcanvas"
+        <img src="../../../assets/Image/icons/menu.png" class="menu-icon" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
     </div>
 </nav>
@@ -8,7 +8,8 @@
 <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasSidebar"
     aria-labelledby="offcanvasSidebarLabel">
     <div class="offcanvas-header d-flex justify-content-end">
-        <img src="../../../assets/Image/icons/menu-2.png" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+        <img src="../../../assets/Image/icons/menu-2.png" class="close-icon" type="button" data-bs-dismiss="offcanvas"
+            aria-label="Close">
     </div>
     <div class="offcanvas-body">
         <ul class="nav flex-column">
@@ -33,39 +34,26 @@
                     Doctor
                 </p>
             </li>
-            <!-- Staff Dropdown -->
-            <li class="nav-item dropdown">
-                <p class="nav-link dropdown-toggle" id="staffDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <img src="../../../assets/Image/icons/group.png" width="24" height="24">
-                    Staff
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/admin/staff" routerLinkActive="active"
+                    (click)="navigateTo('/admin/staff')">
+                    <img src="../../../assets/Image/icons/multiple-users-silhouette.png" width="24" height="24">
+                    Staff List
                 </p>
-                <ul class="dropdown-menu" aria-labelledby="staffDropdown">
-                    <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff')">
-                            <img src="../../../assets/Image/icons/multiple-users-silhouette.png" width="24" height="24">
-                            Staff List
-                        </p>
-                    </li>
-                    <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/add-staff')">
-                            <img src="../../../assets/Image/icons/add-user.png" width="24" height="24">
-                            Add Staff
-                        </p>
-                    </li>
-                    <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-leaves')">
-                            <img src="../../../assets/Image/icons/exit.png" width="24" height="24">
-                            Leaves
-                        </p>
-                    </li>
-                    <li>
-                        <p class="dropdown-item" (click)="navigateTo('/admin/staff/staff-holidays')">
-                            <img src="../../../assets/Image/icons/beach-umbrella.png" width="24" height="24">
-                            Holidays
-                        </p>
-                    </li>
-                </ul>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/admin/staff/staff-leaves" routerLinkActive="active"
+                    (click)="navigateTo('/admin/staff/staff-leaves')">
+                    <img src="../../../assets/Image/icons/exit.png" width="24" height="24">
+                    Leaves
+                </p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/admin/staff/staff-holidays" routerLinkActive="active"
+                    (click)="navigateTo('/admin/staff/staff-holidays')">
+                    <img src="../../../assets/Image/icons/beach-umbrella.png" width="24" height="24">
+                    Holidays
+                </p>
             </li>
 
             <li class="nav-item">
@@ -105,6 +93,6 @@
         </ul>
     </div>
 </div>
-<div class="scrollToTop" style="display: flex;" *ngIf="showScrollButton" (click)="scrollToTop()">
+<div class="scrollToTop" *ngIf="showScrollButton" (click)="scrollToTop()">
     <img src="../../../assets/Image/icons/right.png" width="18" height="18">
 </div>

@@ -1,44 +1,59 @@
-<div class="container card p-3">
-     <h3 class="mb-3 mb-md-0">Add New Stock</h3>
-    <!-- Form Group for Stock -->
-    <form [formGroup]="stockForm" (ngSubmit)="onSubmit()">
-        <div class="row mb-3">
-            <!-- Stock Information -->
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="itemName" class="form-label">Item Name *</label>
-                <input type="text" id="itemName" formControlName="itemName" class="form-control" required />
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="category" class="form-label">Category *</label>
-                <select id="category" formControlName="category" class="form-select" required>
-                    <option value="">Select Category</option>
-                    <option value="medicine">Medicine</option>
-                    <option value="antibiotics">Antibiotics</option>
-                    <option value="supplements">Supplements</option>
-                </select>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="quantity" class="form-label">Quantity *</label>
-                <input type="number" id="quantity" formControlName="quantity" class="form-control" required />
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="date" class="form-label">Date *</label>
-                <input type="date" id="date" formControlName="date" class="form-control" required />
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="price" class="form-label">Price *</label>
-                <input type="number" id="price" formControlName="price" class="form-control" required />
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="details" class="form-label">Details *</label>
-                <textarea id="details" formControlName="details" class="form-control" required></textarea>
-            </div>
-
-            <!-- Form Action Buttons -->
-            <div class="d-flex justify-content-end mt-3">
-                <button type="submit" class="btn btn-primary bg-primary me-2">Submit</button>
-                <button type="button" class="btn btn-secondary">Cancel</button>
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">Stock List</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add/Edit Stock</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </form>
+    </div>
+    <div class="card p-3">
+        <h3 class="mb-3 mb-md-0">Add New Stock</h3>
+        <!-- Form Group for Stock -->
+        <form [formGroup]="stockForm" (ngSubmit)="onSubmit()">
+            <div class="row mb-3">
+                <!-- Stock Information -->
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="itemName" class="form-label">Item Name *</label>
+                    <input type="text" id="itemName" formControlName="itemName" class="form-control" required />
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="category" class="form-label">Category *</label>
+                    <select id="category" formControlName="category" class="form-select" required>
+                        <option value="">Select Category</option>
+                        <option value="medicine">Medicine</option>
+                        <option value="antibiotics">Antibiotics</option>
+                        <option value="supplements">Supplements</option>
+                    </select>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="quantity" class="form-label">Quantity *</label>
+                    <input type="number" id="quantity" formControlName="quantity" class="form-control" required />
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="date" class="form-label">Date *</label>
+                    <input type="date" id="date" formControlName="date" class="form-control" required />
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="price" class="form-label">Price *</label>
+                    <input type="number" id="price" formControlName="price" class="form-control" required />
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="details" class="form-label">Details *</label>
+                    <textarea id="details" formControlName="details" class="form-control" required></textarea>
+                </div>
+
+                <!-- Form Action Buttons -->
+                <div class="col-xl-4 col-md-6 col-sm-12 mt-3">
+                    <button type="submit" class="btn btn-primary bg-primary me-2">Submit</button>
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
