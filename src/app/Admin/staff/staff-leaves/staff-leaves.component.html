@@ -1,102 +1,115 @@
-<div class="container card p-4">
-    <div class="row mb-4">
-        <div>
-            <h3>Leave Request</h3>
+<div class="container ">
+    <div class="row">
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Leave Resquest</li>
+                </ol>
+            </nav>
         </div>
-        <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
+        <div class="card">
+            <div class="p-2">
+                <h3>Leave Request</h3>
+            </div>
+            <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
 
-            <div class="col-xl-2">
-                <input type="text" placeholder="Employee Name" class="form-control" />
+                <div class="col-xl-2">
+                    <input type="text" placeholder="Employee Name" class="form-control" />
+                </div>
+                <div class="col-xl-2">
+                    <select class="form-select">
+                        <option selected>Select Leave Type</option>
+                        <option>Casual Leave</option>
+                        <option>Medical Leave</option>
+                    </select>
+                </div>
+                <div class="col-xl-2">
+                    <input type="date" class="form-control" />
+                </div>
+                <div class="col-xl-2">
+                    <input type="date" class="form-control" />
+                </div>
+                <div class="col-xl-2 add-group d-flex flex-md-row">
+                    <p class="btn btn-primary add-pluss ms-2" routerLink="/admin/staff/add-staff">
+                        <img src="../../../assets/Image/icons/plus.svg" alt="">
+                    </p>
+                    <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2"><img
+                            src="../../../assets/Image/icons/re-fresh.svg" alt=""></a>
+                </div>
             </div>
-            <div class="col-xl-2">
-                <select class="form-select">
-                    <option selected>Select Leave Type</option>
-                    <option>Casual Leave</option>
-                    <option>Medical Leave</option>
-                </select>
-            </div>
-            <div class="col-xl-2">
-                <input type="date" class="form-control" />
-            </div>
-            <div class="col-xl-2">
-                <input type="date" class="form-control" />
-            </div>
-            <div class="col-xl-2 add-group d-flex flex-md-row">
-                <p class="btn btn-primary add-pluss ms-2" routerLink="/admin/staff/add-staff">
-                    <img src="../../../assets/Image/icons/plus.svg" alt="">
-                </p>
-                <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2"><img
-                        src="../../../assets/Image/icons/re-fresh.svg" alt=""></a>
+            <!-- Scrollable Table Container -->
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Leave Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>No of days</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Andrea Lalema</td>
+                            <td>Casual Leave</td>
+                            <td>02.10.2022</td>
+                            <td>04.10.2022</td>
+                            <td>2 Days</td>
+                            <td>Not Feeling well</td>
+                            <td class="text-success">Approved</td>
+                        </tr>
+                        <tr>
+                            <td>William Stephin</td>
+                            <td>Casual Leave</td>
+                            <td>04.10.2022</td>
+                            <td>06.10.2022</td>
+                            <td>2 Days</td>
+                            <td>Going to Vacation</td>
+                            <td class="text-warning">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Smith Bruklin</td>
+                            <td>Casual Leave</td>
+                            <td>02.10.2022</td>
+                            <td>04.10.2022</td>
+                            <td>2 Days</td>
+                            <td>Family Function</td>
+                            <td class="text-danger">Declined</td>
+                        </tr>
+                        <tr>
+                            <td>Bernardo James</td>
+                            <td>Casual Leave</td>
+                            <td>08.10.2022</td>
+                            <td>10.10.2022</td>
+                            <td>2 Days</td>
+                            <td>Going to Vacation</td>
+                            <td class="text-secondary">New</td>
+                        </tr>
+                        <tr>
+                            <td>Cristina Groves</td>
+                            <td>Medical Leave</td>
+                            <td>02.10.2022</td>
+                            <td>04.10.2022</td>
+                            <td>2 Days</td>
+                            <td>Family Function</td>
+                            <td class="text-success">Approved</td>
+                        </tr>
+                        <tr>
+                            <td>Mark Hay Smith</td>
+                            <td>Medical Leave</td>
+                            <td>02.10.2022</td>
+                            <td>04.10.2022</td>
+                            <td>2 Days</td>
+                            <td>Not Feeling well</td>
+                            <td class="text-success">Approved</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <table class="table table-bordered">
-        <thead class="table-light">
-            <tr>
-                <th>Employee Name</th>
-                <th>Leave Type</th>
-                <th>From</th>
-                <th>To</th>
-                <th>No of days</th>
-                <th>Reason</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Andrea Lalema</td>
-                <td>Casual Leave</td>
-                <td>02.10.2022</td>
-                <td>04.10.2022</td>
-                <td>2 Days</td>
-                <td>Not Feeling well</td>
-                <td class="text-success">Approved</td>
-            </tr>
-            <tr>
-                <td>William Stephin</td>
-                <td>Casual Leave</td>
-                <td>04.10.2022</td>
-                <td>06.10.2022</td>
-                <td>2 Days</td>
-                <td>Going to Vacation</td>
-                <td class="text-warning">Pending</td>
-            </tr>
-            <tr>
-                <td>Smith Bruklin</td>
-                <td>Casual Leave</td>
-                <td>02.10.2022</td>
-                <td>04.10.2022</td>
-                <td>2 Days</td>
-                <td>Family Function</td>
-                <td class="text-danger">Declined</td>
-            </tr>
-            <tr>
-                <td>Bernardo James</td>
-                <td>Casual Leave</td>
-                <td>08.10.2022</td>
-                <td>10.10.2022</td>
-                <td>2 Days</td>
-                <td>Going to Vacation</td>
-                <td class="text-secondary">New</td>
-            </tr>
-            <tr>
-                <td>Cristina Groves</td>
-                <td>Medical Leave</td>
-                <td>02.10.2022</td>
-                <td>04.10.2022</td>
-                <td>2 Days</td>
-                <td>Family Function</td>
-                <td class="text-success">Approved</td>
-            </tr>
-            <tr>
-                <td>Mark Hay Smith</td>
-                <td>Medical Leave</td>
-                <td>02.10.2022</td>
-                <td>04.10.2022</td>
-                <td>2 Days</td>
-                <td>Not Feeling well</td>
-                <td class="text-success">Approved</td>
-            </tr>
-        </tbody>
-    </table>
 </div>

@@ -1,72 +1,87 @@
-<div class="container card p-3">
-     <h3 class="mb-3 mb-md-0">Patient Details</h3>
-    <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
-        <div class="row g-3">
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="firstName" class="form-label">First Name *</label>
-                <input type="text" id="firstName" formControlName="firstName" class="form-control"
-                    placeholder="Enter First Name" required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="lastName" class="form-label">Last Name *</label>
-                <input type="text" id="lastName" formControlName="lastName" class="form-control"
-                    placeholder="Enter Last Name" required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="mobile" class="form-label">Mobile *</label>
-                <input type="tel" id="mobile" formControlName="mobile" class="form-control"
-                    placeholder="Enter Mobile Number" required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="email" class="form-label">Email *</label>
-                <input type="email" id="email" formControlName="email" class="form-control" placeholder="Enter Email"
-                    required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="password" class="form-label">Password *</label>
-                <input type="password" id="password" formControlName="password" class="form-control"
-                    placeholder="Enter Password" required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="confirmPassword" class="form-label">Confirm Password *</label>
-                <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control"
-                    placeholder="Confirm Password" required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="dob" class="form-label">Date Of Birth</label>
-                <input type="date" id="dob" formControlName="dob" class="form-control">
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="address" class="form-label">Address *</label>
-                <input type="text" id="address" formControlName="address" class="form-control" required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="department" class="form-label">Department *</label>
-                <select id="department" formControlName="department" class="form-select" required>
-                    <option>Select Department</option>
-                    <!-- Add options here -->
-                </select>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="address" class="form-label">Address *</label>
-                <textarea id="address" formControlName="address" class="form-control" placeholder="Enter Address"
-                    required></textarea>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="avatar" class="form-label">Avatar *</label>
-                <input type="file" id="avatar" formControlName="avatar" class="form-control" required>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <label for="status" class="form-label">Status *</label>
-                <select id="status" formControlName="status" class="form-select" required>
-                    <option>Active</option>
-                    <option>Inactive</option>
-                </select>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <button type="submit" class="btn btn-primary bg-primary me-2">Submit</button>
-                <button type="button" class="btn btn-secondary">Cancel</button>
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">Patient List</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add/Edit Patient</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </form>
+    </div>
+    <div class="card p-3">
+        <h3 class="mb-3 mb-md-0">Patient Details</h3>
+        <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="firstName" class="form-label">First Name *</label>
+                    <input type="text" id="firstName" formControlName="firstName" class="form-control"
+                        placeholder="Enter First Name" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input type="text" id="lastName" formControlName="lastName" class="form-control"
+                        placeholder="Enter Last Name" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="mobile" class="form-label">Mobile *</label>
+                    <input type="tel" id="mobile" formControlName="mobile" class="form-control"
+                        placeholder="Enter Mobile Number" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" formControlName="email" class="form-control"
+                        placeholder="Enter Email" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="password" class="form-label">Password *</label>
+                    <input type="password" id="password" formControlName="password" class="form-control"
+                        placeholder="Enter Password" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="confirmPassword" class="form-label">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control"
+                        placeholder="Confirm Password" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="dob" class="form-label">Date Of Birth</label>
+                    <input type="date" id="dob" formControlName="dob" class="form-control">
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="address" class="form-label">Address *</label>
+                    <input type="text" id="address" formControlName="address" class="form-control" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="department" class="form-label">Department *</label>
+                    <select id="department" formControlName="department" class="form-select" required>
+                        <option>Select Department</option>
+                        <!-- Add options here -->
+                    </select>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="address" class="form-label">Address *</label>
+                    <textarea id="address" formControlName="address" class="form-control" placeholder="Enter Address"
+                        required></textarea>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="avatar" class="form-label">Avatar *</label>
+                    <input type="file" id="avatar" formControlName="avatar" class="form-control" required>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <label for="status" class="form-label">Status *</label>
+                    <select id="status" formControlName="status" class="form-select" required>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <button type="submit" class="btn btn-primary bg-primary me-2">Submit</button>
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>

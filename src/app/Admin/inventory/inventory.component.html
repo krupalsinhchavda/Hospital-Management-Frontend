@@ -1,5 +1,13 @@
 <div class="container">
     <div class="row">
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Stock</li>
+                </ol>
+            </nav>
+        </div>
         <div class="col-xl-12 col-md-12 col-sm-12">
             <div class="card">
                 <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
@@ -39,7 +47,7 @@
                                 <td>{{ stock.date }}</td>
                                 <td>{{ stock.price }}</td>
                                 <td>{{ stock.details }}</td>
-                                <td class="text-center">
+                                <td>
                                     <button class="btn btn-primary btn-sm me-2" (click)="editStock(stock)">Edit</button>
                                     <button class="btn btn-danger btn-sm" (click)="deleteStock(stock)">Delete</button>
                                 </td>
