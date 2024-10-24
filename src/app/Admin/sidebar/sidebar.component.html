@@ -1,10 +1,15 @@
 <nav class="navbar bg-primary fixed-top">
-    <div class="container-fluid">
+    <div class="container-fluid d-flex justify-content-between">
         <img src="../../../assets/Image/icons/menu.png" class="menu-icon" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+
+        <!-- User Icon Button -->
+        <img src="../../../assets/Image/icons/user.png" class="user-icon" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
     </div>
 </nav>
 
+<!-- Sidebar Offcanvas -->
 <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasSidebar"
     aria-labelledby="offcanvasSidebarLabel">
     <div class="offcanvas-header d-flex justify-content-end">
@@ -98,6 +103,32 @@
                     Role Management
                 </p>
             </li>
+        </ul>
+    </div>
+</div>
+<div class="scrollToTop" *ngIf="showScrollButton" (click)="scrollToTop()">
+    <img src="../../../assets/Image/icons/right.png" width="18" height="18">
+</div>
+<!-- New User Offcanvas -->
+<div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasUser"
+    aria-labelledby="offcanvasUserLabel">
+    <div class="offcanvas-header d-flex justify-content-end">
+        <img src="../../../assets/Image/icons/menu.png" class="close-icon" type="button" data-bs-dismiss="offcanvas"
+            aria-label="Close">
+    </div>
+    <div class="offcanvas-body">
+        <!-- User Offcanvas Content -->
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/user/profile" routerLinkActive="active">
+                    <img src="../../../assets/Image/icons/user.png" width="24" height="24"> Profile
+                </p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" routerLink="/user/settings" routerLinkActive="active">
+                    <img src="../../../assets/Image/icons/setting.png" width="24" height="24"> Settings
+                </p>
+            </li>
             <li class="nav-item">
                 <p class="nav-link" routerLink="/logout" routerLinkActive="active" (click)="navigateTo('/logout')">
                     <img src="../../../assets/Image/icons/logout.png" width="24" height="24">
@@ -106,7 +137,4 @@
             </li>
         </ul>
     </div>
-</div>
-<div class="scrollToTop" *ngIf="showScrollButton" (click)="scrollToTop()">
-    <img src="../../../assets/Image/icons/right.png" width="18" height="18">
 </div>
