@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">Payment List</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add Payment</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="card p-4">
+        <h3 class="mb-4">Add Payment</h3>
+        <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 col-sm-12">
+                    <!-- Patient Name Dropdown -->
+                    <label for="patientName" class="form-label">Patient Name</label>
+                    <select id="patientName" class="form-control" formControlName="patientName" required>
+                        <option value="" disabled selected>Select Patient</option>
+                        <option *ngFor="let patient of patients" [value]="patient">{{ patient }}</option>
+                    </select>
+                </div>
+                <div class="col-xl-4 col-md-4 col-sm-12">
+                    <!-- Doctor Name Dropdown -->
+                    <label for="doctorName" class="form-label">Doctor Name</label>
+                    <select id="doctorName" class="form-control" formControlName="doctorName" required>
+                        <option value="" disabled selected>Select Doctor</option>
+                        <option *ngFor="let doctor of doctors" [value]="doctor">{{ doctor }}</option>
+                    </select>
+                </div>
+                <div class="col-xl-4 col-md-4 col-sm-12">
+                    <!-- Amount -->
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="number" id="amount" class="form-control" formControlName="amount"
+                        placeholder="Enter amount" required>
+                </div>
+            </div>
+            <h5 class="mb-4">Invoice Form</h5>
+            <!-- Scrollable Table Container -->
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Item</th>
+                            <th>Description</th>
+                            <th>Unit Cost</th>
+                            <th>Qty</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of invoiceItems; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td><input type="text" class="form-control" placeholder="Item Name" /></td>
+                            <td><input type="text" class="form-control" placeholder="Description" /></td>
+                            <td><input type="number" class="form-control" placeholder="0.00" /></td>
+                            <td><input type="number" class="form-control" placeholder="0" /></td>
+                            <td><input type="text" class="form-control" placeholder="0.00" readonly /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-end align-items-center mb-2 gap-3">
+                        <span class="bold-text">Total:</span>
+                        <input type="text" class="form-control w-25" placeholder="0.00" readonly />
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center mb-2 gap-3">
+                        <span class="bold-text">Tax:</span>
+                        <input type="text" class="form-control w-25" placeholder="0.00" readonly />
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center gap-3">
+                        <span class="bold-text">Grand Total:</span>
+                        <input type="text" class="form-control w-25" placeholder="0.00" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <label for="other-info" class="form-label">Other Information *</label>
+                <textarea id="other-info" class="form-control" rows="4"
+                    placeholder="Enter additional information here..."></textarea>
+            </div>
+            <!-- Submit Button in Center -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Proceed to Payment</button>
+            </div>
+        </form>
+    </div>
+</div>
