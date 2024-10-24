@@ -1,0 +1,35 @@
+<div class="container p-3">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="mb-0">Add Payment</h3>
+        <!-- Close Icon -->
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeDialog()"></button>
+    </div>
+    <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+        <!-- Patient Name Dropdown -->
+        <div class="mb-3">
+            <label for="patientName" class="form-label">Patient Name</label>
+            <select id="patientName" class="form-control" formControlName="patientName">
+                <option *ngFor="let patient of patients" [value]="patient">{{ patient }}</option>
+            </select>
+        </div>
+
+        <!-- Doctor Name Dropdown -->
+        <div class="mb-3">
+            <label for="doctorName" class="form-label">Doctor Name</label>
+            <select id="doctorName" class="form-control" formControlName="doctorName">
+                <option *ngFor="let doctor of doctors" [value]="doctor">{{ doctor }}</option>
+            </select>
+        </div>
+
+        <!-- Amount -->
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" id="amount" class="form-control" formControlName="amount" placeholder="Enter amount">
+        </div>
+
+        <!-- Submit Button in Center -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Proceed to Payment</button>
+        </div>
+    </form>
+</div>

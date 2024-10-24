@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Payments</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-xl-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
+                    <h3 class="mb-3 mb-md-0">Payment List</h3>
+                    <div class="top-nav-search table-search-blk">
+                        <input placeholder="Search here" class="form-control search-input" />
+                    </div>
+
+                    <div class="add-group d-flex flex-md-row">
+                        <p class="btn btn-primary add-pluss ms-2" (click)="openAddPaymentDialog()">
+                            <img src="../../../assets/Image/icons/plus.svg" alt="Add Payment">
+                        </p>
+                        <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2">
+                            <img src="../../../assets/Image/icons/re-fresh.svg" alt="Refresh">
+                        </a>
+                    </div>
+                </div>
+                <!-- Scrollable Table Container -->
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Doctor Name</th>
+                                <th>Case Number</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Details</th>
+                                <th>Status</th> <!-- Added status column -->
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let payment of payments">
+                                <td>{{ payment.patientName }}</td>
+                                <td>{{ payment.doctorName }}</td>
+                                <td>{{ payment.caseNo }}</td>
+                                <td>{{ payment.date }}</td>
+                                <td>{{ payment.amount }}</td>
+                                <td>{{ payment.details }}</td>
+                                <td>
+                                    <span [ngClass]="getStatusClass(payment.status)" class="p-2 rounded-5">
+                                        {{ payment.status }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm me-2"
+                                        (click)="editPayment(payment)">Edit</button>
+                                    <button class="btn btn-danger btn-sm"
+                                        (click)="deletePayment(payment)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <span>Showing 1 to {{ payments.length }} of {{ payments.length }} entries</span>
+                    <div>
+                        <button class="btn btn-secondary me-2">Previous</button>
+                        <button class="btn btn-secondary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
