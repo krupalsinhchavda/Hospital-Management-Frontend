@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Role</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-xl-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="col-xl-12 col-md-12 col-sm-12 d-flex flex-column flex-md-row p-3 gap-3">
+                    <h3 class="mb-3 mb-md-0">Roles List</h3>
+                    <div class="top-nav-search table-search-blk ">
+                        <input placeholder="Search here" class="form-control search-input" />
+                    </div>
+
+                    <div class="add-group d-flex flex-md-row">
+                        <p class="btn btn-primary add-pluss ms-2" (click)="openAddDialog('')">
+                            <img src="../../../assets/Image/icons/plus.svg" alt="">
+                        </p>
+                        <a href="javascript:;" class="btn btn-primary doctor-refresh ms-2"><img
+                                src="../../../assets/Image/icons/re-fresh.svg" alt=""></a>
+                    </div>
+                </div>
+                <!-- Scrollable Table Container -->
+                <div class="table-responsive">
+                    <table class="table">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
