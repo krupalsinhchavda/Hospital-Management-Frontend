@@ -67,6 +67,14 @@ p.active {
     margin-right: 10px;
 }
 
+.user-icon {
+    background: #f4f5fa;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
     width: 8px;

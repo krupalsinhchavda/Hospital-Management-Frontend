@@ -17,6 +17,7 @@ export const AdminRoutingModule: Routes = [
       { path: 'inventory', loadChildren: () => import('./inventory/inventory-routing.module').then(m => m.InventoryRoutingModule) },
       { path: 'allotment', loadChildren: () => import('./allotment/allotment-routing.module').then(m => m.AllotmentRoutingModule) },
       { path: 'payments', loadChildren: () => import('./payments/payments-routing.module').then(m => m.PaymentsRoutingModule) },
+      { path: 'role', loadChildren: () => import('./role-management/role-management-routing.module').then(m => m.RoleManagementRoutingModule) },
     ]
   }
 ]
