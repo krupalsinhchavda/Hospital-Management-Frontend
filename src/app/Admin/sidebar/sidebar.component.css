@@ -52,7 +52,26 @@ p.active {
     cursor: pointer;
 }
 
-.scrollToTop:hover {
+.chat-bottom {
+    background-color: #1d2951;
+    color: white;
+    position: fixed;
+    bottom: 10%;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.scrollToTop,
+.chat-bottom:hover {
     background-color: #172241;
 }
 
